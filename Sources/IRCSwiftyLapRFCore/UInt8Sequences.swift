@@ -4,7 +4,7 @@
 
 import Foundation
 
-public extension Sequence where Iterator.Element == UInt8 {
+public extension Sequence where Element == UInt8 {
     
     func hexString() -> String {
         return map { String(format:"0x%02x ", $0) }.joined()
@@ -21,17 +21,27 @@ public extension Sequence where Iterator.Element == UInt8 {
     }
     
     func readFloat() -> Float {
-        let map = self.map{ $0 }
-        var float: Float = 0
-        memccpy(&float, map, 4, 4)
-        return float
+        var value: Float = 0
+        let bytes = Array(self)
+        precondition(bytes.count >= 4)
+        withUnsafeMutableBytes(of: &value) { dst in
+            bytes.withUnsafeBytes { src in
+                dst.copyBytes(from: src.prefix(4))
+            }
+        }
+        return value
     }
     
     func readDouble() -> Double {
-        let map = self.map{ $0 }
-        var double: Double = 0
-        memccpy(&double, map, 8, 8)
-        return double
+        var value: Double = 0
+        let bytes = Array(self)
+        precondition(bytes.count >= 8)
+        withUnsafeMutableBytes(of: &value) { dst in
+            bytes.withUnsafeBytes { src in
+                dst.copyBytes(from: src.prefix(8))
+            }
+        }
+        return value
     }
     
 }

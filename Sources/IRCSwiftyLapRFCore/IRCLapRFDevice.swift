@@ -4,7 +4,7 @@
 
 import Foundation
 
-public protocol IRCLapRFDeviceDelegate: class {
+public protocol IRCLapRFDeviceDelegate: AnyObject {
     func rssiRangeUpdated(_ device: IRCLapRFDevice, slot: UInt8)
     func rfSetupRead(_ device: IRCLapRFDevice, slot: UInt8)
     func settingsUpdated(_ device: IRCLapRFDevice)
@@ -132,7 +132,7 @@ public class IRCLapRFDevice: NSObject {
     }
     
     public func ingestData(_ data: Data) {
-        buffer.append(contentsOf: data.map{$0})
+        buffer.append(contentsOf: data)
         IRCLapRFProtocol.processBytes(&buffer, device: self)
     }
     
