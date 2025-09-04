@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
     spec.version                = '0.2'
     spec.summary                = 'ImmersionRC LapRF Comm Library'
 
-    spec.homepage               = 'https://github.com/hydrafpv/irc-swifty-laprf'
+    spec.homepage               = 'https://github.com/MariusH-Dev/swifty-laprf'
     spec.license                = { :type => 'MIT', :file => 'LICENSE' }
     spec.author                 = { 'netizen01' => 'n01@invco.de' }
 
@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
     spec.tvos.deployment_target = '11.2'
     spec.osx.deployment_target  = '10.13'
 
-    spec.source                 = { :git => 'https://github.com/hydrafpv/irc-swifty-laprf.git',
+    spec.source                 = { :git => 'https://github.com/MariusH-Dev/swifty-laprf.git',
                                     :tag => spec.version.to_s }
 
     spec.default_subspec        = 'Core'
