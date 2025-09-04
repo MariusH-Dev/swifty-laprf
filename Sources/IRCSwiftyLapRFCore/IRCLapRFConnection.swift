@@ -5,7 +5,7 @@
 import Foundation
 import Signals
 
-public protocol IRCLapRFConnection: class {
+public protocol IRCLapRFConnection: AnyObject {
     var name: String { get }
     var device: IRCLapRFDevice { get }
     var lastRSSI: [[Float]] { set get }

@@ -6,7 +6,7 @@ import IRCSwiftyLapRFCore
 import Foundation
 import ORSSerial
 
-public protocol IRCLapRFUSBDelegate: class {
+public protocol IRCLapRFUSBDelegate: AnyObject {
     func usbConnectionOpened(_ connection: IRCLapRFUSBConnection)
     func usbConnectionClosed(_ connection: IRCLapRFUSBConnection)
 }
@@ -134,4 +134,3 @@ extension IRCLapRFUSBConnection: ORSSerialPortDelegate {
     }
     
 }
-

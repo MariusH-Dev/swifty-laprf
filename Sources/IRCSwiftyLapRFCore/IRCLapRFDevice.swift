@@ -4,7 +4,7 @@
 
 import Foundation
 
-public protocol IRCLapRFDeviceDelegate: class {
+public protocol IRCLapRFDeviceDelegate: AnyObject {
     func rssiRangeUpdated(_ device: IRCLapRFDevice, slot: UInt8)
     func rfSetupRead(_ device: IRCLapRFDevice, slot: UInt8)
     func settingsUpdated(_ device: IRCLapRFDevice)
