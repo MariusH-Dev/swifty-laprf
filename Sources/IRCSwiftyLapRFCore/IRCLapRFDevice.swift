@@ -132,7 +132,7 @@ public class IRCLapRFDevice: NSObject {
     }
     
     public func ingestData(_ data: Data) {
-        buffer.append(contentsOf: data.map{$0})
+        buffer.append(contentsOf: data)
         IRCLapRFProtocol.processBytes(&buffer, device: self)
     }
     
