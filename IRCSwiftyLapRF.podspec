@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.license                = { :type => 'MIT', :file => 'LICENSE' }
     spec.author                 = { 'netizen01' => 'n01@invco.de' }
 
-    spec.ios.deployment_target  = '10.2'
+    spec.ios.deployment_target  = '15.0'
     spec.tvos.deployment_target = '11.2'
     spec.osx.deployment_target  = '10.13'
 
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
                                     :tag => spec.version.to_s }
 
     spec.default_subspec        = 'Core'
-    spec.swift_version          = '5.0'
+    spec.swift_version          = '6.0'
 
     spec.subspec 'Core' do |core|
         core.source_files       = 'Source/Core/**/*.swift'

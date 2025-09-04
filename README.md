@@ -1,7 +1,7 @@
 # ImmersionRC LapRF SDK for Swift
-![iOS](https://img.shields.io/badge/iOS-10.2%2B-blue.svg)
+![iOS](https://img.shields.io/badge/iOS-15%2B-blue.svg)
 ![macOS](https://img.shields.io/badge/macOS-10.13%2B-blue.svg)
-![Swift 4.2](https://img.shields.io/badge/swift-4.2-orange.svg)
+![Swift 6](https://img.shields.io/badge/swift-6-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)
 [![CocoaPods](https://cocoapod-badges.herokuapp.com/v/IRCSwiftyLapRF/badge.svg)](https://cocoapods.org/pods/IRCSwiftyLapRF)
 
